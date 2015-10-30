@@ -10,8 +10,8 @@ Put something like the following in your config.yaml to configure:
     kodi:
         host: localhost
         port: 8080
-		user: user
-		pwd: secret
+	user: user
+	pwd: secret
 """
 import pyjsonrpc
 from beets import config
@@ -36,8 +36,8 @@ class KodiUpdate(BeetsPlugin):
         config['kodi'].add({
             u'host': u'localhost',
             u'port': 8080,
-            u'user': u'username',
-            u'pwd': u'password'})
+            u'user': u'kodi',
+            u'pwd': u''})
 
         self.register_listener('database_change', self.listen_for_db_change)
 
